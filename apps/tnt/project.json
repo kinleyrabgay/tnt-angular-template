@@ -13,9 +13,7 @@
         "outputPath": "dist/apps/tnt",
         "index": "apps/tnt/src/index.html",
         "main": "apps/tnt/src/main.ts",
-        "polyfills": ["zone.js"],
         "tsConfig": "apps/tnt/tsconfig.app.json",
-        "inlineStyleLanguage": "scss",
         "assets": [
           {
             "glob": "**/*",

@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+@use "tailwindcss";
+
+/* Configure your custom theme using @theme directive */
+@theme {
+  /* Base Theme Colors */
+  --color-primary: #ff0000;
+  --color-secondary: #a855f7;
+  --color-accent: #f59e0b;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  
+  /* Custom Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Georgia', serif;
+  --font-mono: 'Fira Code', monospace;
+  
+  /* Custom Spacing (optional) */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  
+  /* Custom Breakpoints (optional) */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+}
