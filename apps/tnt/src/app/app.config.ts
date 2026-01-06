@@ -1,13 +1,16 @@
 import {
   ApplicationConfig,
+  isDevMode,
   provideBrowserGlobalErrorListeners,
   provideZonelessChangeDetection,
 } from '@angular/core';
 import { provideRouter } from '@angular/router';
-import { appRoutes } from './app.routes';
 import { providePrimeNG } from 'primeng/config';
 import Aura from '@primeuix/themes/aura';
-
+import { provideHttpClient } from '@angular/common/http';
+import { provideTransloco } from '@jsverse/transloco';
+import { TranslocoHttpLoader } from './transloco-loader';
+import { appRoutes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -15,9 +18,10 @@ export const appConfig: ApplicationConfig = {
     provideZonelessChangeDetection(),
     provideRouter(appRoutes),
 
+    provideHttpClient(),
+
     providePrimeNG({
       theme: {
-        // preset: SppPreset,
         preset: Aura,
         options: {
           cssLayer: {
@@ -28,6 +32,16 @@ export const appConfig: ApplicationConfig = {
         },
       },
       ripple: true,
+    }),
+
+    provideTransloco({
+      config: {
+        availableLangs: ['de', 'en', 'fr', 'it'],
+        defaultLang: 'en',
+        reRenderOnLangChange: true,
+        prodMode: !isDevMode(),
+      },
+      loader: TranslocoHttpLoader,
     }),
   ],
 };

@@ -85,3 +85,10 @@ And join the Nx community:
 ```
 npx nx g @nx/angular:setup-tailwind tnt
 ```
+
+
+
+
+
+# Nx Commands
+npx nx generate @nx/angular:library core --buildable --unitTestRunner=vitest-angular

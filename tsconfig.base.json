@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@tnt/core": ["libs/core/src/index.ts"],
+      "@tnt/authentication": ["libs/features/authentication/src/index.ts"],
+      "@tnt/users": ["libs/features/users/src/index.ts"],
+      "@tnt/accounts": ["libs/features/accounts/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
